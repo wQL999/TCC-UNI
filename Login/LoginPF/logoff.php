@@ -6,6 +6,6 @@
     unset($$_SESSION['logado']);
     unset($$_SESSION['nome']);
     session_destroy();
-    header("location:#.php");
+    header("location:../../Principal/index.php");
 
 ?>

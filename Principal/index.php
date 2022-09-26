@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style-principal.css">
+    <link rel="stylesheet" href="style-principal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <script src="js/app.js" defer></script>
+    <script src="../js/app.js" defer></script>
     <title>Uni</title>
 </head>
 <body>
@@ -40,28 +40,28 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first" id="slide1">
-                <a href="#"><img src="imagens/box-imagem.png" alt="imagem1"></a>
+                <a href="#"><img src="../imagens/box-imagem.png" alt="imagem1"></a>
                 <div class="texto">
                     <h1>Saiba mais..</h1>
                     <p>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</p>
                 </div>
             </div>
             <div class="slide" id="slide2">
-                <a href="#"><img src="imagens/the-beggars-sat-wrapped-in-cloths-and-eating-noodles - Copia.jpg" alt="imagem2"></a>
+                <a href="#"><img src="../imagens/the-beggars-sat-wrapped-in-cloths-and-eating-noodles - Copia.jpg" alt="imagem2"></a>
                 <div class="texto">
                     <h1>Saiba mais..</h1>
                     <p>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</p>
                 </div>
             </div>
             <div class="slide" id="slide3">
-                <a href="#"><img src="imagens/adoptme - Copia.png" alt="imagem3"></a>
+                <a href="#"><img src="../imagens/adoptme - Copia.png" alt="imagem3"></a>
                 <div class="texto">
                     <h1>Saiba mais..</h1>
                     <p>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</p>
                 </div>
             </div>
             <div class="slide" id="slide4">
-                <a href="#"><img src="imagens/medium-shot-people-working-together - Copia.jpg" alt="imagem4"></a>
+                <a href="#"><img src="../imagens/medium-shot-people-working-together - Copia.jpg" alt="imagem4"></a>
                 <div class="texto">
                     <h1>Saiba mais..</h1>
                     <p>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</p>
@@ -85,7 +85,7 @@
 
     <section class="como-ajudar">
         <div class="componentes">
-            <img src="imagens/como-ajudar.jpg" alt="">
+            <img src="../imagens/como-ajudar.jpg" alt="">
     </div>
     <div class="container">
     <div class="textos">

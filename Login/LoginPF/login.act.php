@@ -17,16 +17,16 @@
             @session_start();
             $_SESSION['logado'] = true;
             $_SESSION['nome'] = $usuario['nome'];
-            header("location:#.php");
+            header("location:../../Principal/index.php");
     
         } else {
             $msg = "<div class=errormsg> Email e/ou Senha Incorretos </div>";
-            header("location:login.php");
+            header("location:index.html");
         }
 
     } else {
         $msg = "<div class=errormsg> <img class=errorimg src=error-icon.png> Email e/ou Senha Incorretos </div>";
-        header("location:login.php");
+        header("location:index.html");
     }
 
     @session_start();
