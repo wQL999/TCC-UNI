@@ -1,0 +1,79 @@
+header.sticky
+{
+    background: #060d29;
+    padding: 33px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0,0.05);
+}
+header.sticky .logo
+{
+color: #111;
+}
+header .logo .sticky span
+{
+color: #111;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.9s;
+}
+header .logo
+{
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo
+{
+color: #fff;
+}
+header .logo span
+{
+    color: rgb(255, 0, 0);
+}
+header .nav-links
+{
+    position: relative;
+    display: flex;
+
+}
+header .nav-links .nav-item
+{
+    list-style: none;
+    margin-left: 30px;
+}
+header .nav-links .nav-item a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 15pt;
+}
+header.sticky .nav-links .nav-item a
+{
+    color: #fff;
+}
+header .nav-links .nav-item a
+{
+    text-decoration: none;
+    padding: 6px 20px;
+    
+    color: white;
+
+}
+header .nav-links .nav-item #contact:hover,
+header .nav-links .nav-item  #contact.active
+{
+    border-bottom: 3px  rgb(255, 0, 0) solid;  
+    color: white;
+    
+}
