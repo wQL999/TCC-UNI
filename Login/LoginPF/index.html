@@ -19,7 +19,7 @@
               
                 <div class="signin-signup">
                 
-                    <form action="login.act.php" method="post" class="sign-in-form">
+                    <form action="login.act.php" method="post" class="sign-in-form" id="form">
                  
                         <h2 class="title">Entrar</h2>
                   <div class="input-field">
@@ -49,33 +49,36 @@
                 </form>
 
 
-                <form action="cadastro.act.php" method="post" class="sign-up-form">
+                <form action="cadastro.act.php" method="post" class="sign-up-form" id="form">
                   <h2 class="title">Seja um de nós!</h2>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Nome" name="nome"/>
+                    <input type="text" placeholder="Nome" name="nome" id="nome"/>
+                    <small>Error message</small>
                   </div>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" name="email"/>
+                    <input type="email" placeholder="Email" name="email" id="email"/>
                   </div>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="CPF" name="codCPF"/>
+                    <input type="text" placeholder="CPF" name="codCPF" id="codCPF"/>
                   </div>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-phone"></i>
-                    <input type="text" placeholder="Telefone" name="telefone"/>
+                    <input type="text" placeholder="Telefone" name="telefone" id="telefone"/>
                   </div>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Senha" name="senha"/>
+                    <input type="password" placeholder="Senha" name="senha" id="senha"/>
+              
                   </div>
-                  <div class="input-field">
+                  <div class="input-field" id="inputfield">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Confirme a senha" name="confirm_senha"/>
+                    <input type="password" placeholder="Confirme a senha" name="confirm_senha" id="confirm_senha"/>
+              
                   </div>
-                  <input type="submit" class="btn" value="Cadastre-se" />
+                  <input type="submit" class="btn" value="Cadastre-se">
                   <p class="social-text">Ou se cadastre pelas redes sociais</p>
                   <div class="social-media">
                     <a href="#" class="social-icon">
@@ -124,6 +127,7 @@
           </div>
       
           <script src="app.js"></script>
+          <script src="validar.js"></script>
           
    </body>
 
