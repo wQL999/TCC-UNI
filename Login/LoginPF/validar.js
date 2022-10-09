@@ -1,5 +1,5 @@
 const form = document.getElementById('form')
-const inputfield = document.getElementById('inputfield')
+const inputBox = document.getElementById('inputBox')
 
 const nome = document.getElementById('nome')
 const email = document.getElementById('email')
@@ -23,10 +23,52 @@ function checkInputs() {
     const senhaValue = senha.value.trim()
     const confirmSenhaValue = confirmSenha.value.trim()
 
-    if(nomeValue === '') {
+    if(nomeValue == "") {
 
-        errorValidation(nome, 'Preencha esse campo')
-        inputfield.style.border = "3px solid crimson"
+        nome.focus()
+
+        console.log("erro nome")
+   
+    } 
+
+    if(emailValue == "") {
+
+        email.focus()
+
+        console.log("erro email")
+   
+    }
+
+    if(codCPFValue == "") {
+
+        codCPF.focus()
+
+        console.log("erro cpf")
+   
+    }
+
+    if(telefoneValue == "") {
+
+        telefone.focus()
+
+        console.log("erro telefone")
+   
+    }
+
+    if(senhaValue == "") {
+
+        senha.focus()
+
+        console.log("erro senha")
+   
+    }
+
+    if(confirmSenhaValue == "") {
+
+        confirmSenha.focus()
+
+        console.log("erro confirmsenha")
+   
     }
 
 
@@ -34,6 +76,3 @@ function checkInputs() {
 
 }
 
-function errorValidation(input, message) {
-    inputfield.parentElement;
-}
