@@ -20,13 +20,13 @@
             header("location:../../Principal/index.php");
     
         } else {
-            $msg = "<div class=errormsg> Email e/ou Senha Incorretos </div>";
-            header("location:index.html");
+            $msg = "<span class=error> Email e/ou Senha Incorretos </span>";
+            header("location:login.php");
         }
 
     } else {
-        $msg = "<div class=errormsg> <img class=errorimg src=error-icon.png> Email e/ou Senha Incorretos </div>";
-        header("location:index.html");
+        $msg = "<span class=error> Email e/ou Senha Incorretos </span>";
+        header("location:login.php");
     }
 
     @session_start();

@@ -9,7 +9,7 @@ $busca = mysqli_query($con, "Select * from `tb_pessoafisica` where `email` = '$e
 
 if($busca->num_rows != 0) {
     $msg = "Email já utilizado";
-    header("location:index.html");
+    header("location:cadastro.php");
 
 }else {
 

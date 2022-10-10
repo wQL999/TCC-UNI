@@ -179,6 +179,7 @@ form {
     grid-template-columns: 15% 85%;
     padding: 0 0.5rem;
     position: relative;
+    border: 1px solid #060d29;
 }
 
 .inputBox .fas{
@@ -219,12 +220,21 @@ form {
     letter-spacing: 0.2em;
 }
 
+.error{
+    display: block;
+    margin-top: 10px;
+    color: crimson;
+    font-size: 0.75em;
+}
+
+/*
 .inputBox input:valid,
 .inputBox input:focus {
     border: 1px solid #060d29;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+*/
 
 .inputSub {
     width: 270px;

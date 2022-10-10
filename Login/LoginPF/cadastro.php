@@ -41,42 +41,54 @@
         
             <h2>Cadastro</h2>
 
-            <form action="#" method="post" id="form" name="form" >
+            <form action="cadastro.act.php" method="post" id="form" name="form" >
 
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required>
                     <span>Nome</span>
                 </div>
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <span>Email</span>
                 </div>
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="codCPF" id="codCPF">
+                    <input type="text" name="codCPF" id="codCPF" required>
                     <span>CPF</span>
                 </div>
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-phone"></i>
-                    <input type="text" name="telefone" id="telefone">
+                    <input type="text" name="telefone" id="telefone" required>
                     <span>Telefone</span>
                 </div>
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="senha" id="senha"> 
+                    <input type="password" name="senha" id="senha" required> 
                     <span>Senha</span>
                 </div>
                 <div class="inputBox" id="inputBox">
                     <i class="fas fa-lock"></i>
-                    <input type="password" name="confirm_senha" id="confirm_senha"> 
+                    <input type="password" name="confirm_senha" id="confirm_senha" required> 
                     <span>Confirme a senha</span>
                 </div>
 
                 <input type="submit" value="Cadastrar" class="inputSub"/>
 
             </form>
+
+            <span class="error" id="error"> <?php @session_start();
+        if(isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+        ?>
+        </span>
+
+            <div class="link">
+                <a href="login.html">Já possuo uma conta.</a>
+            </div>
 
             <p class="social-text">Ou entre pelas redes sociais</p>
 

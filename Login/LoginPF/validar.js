@@ -1,78 +1,93 @@
-const form = document.getElementById('form')
+const fields = document.querySelectorAll("[required]")
 const inputBox = document.getElementById('inputBox')
 
-const nome = document.getElementById('nome')
-const email = document.getElementById('email')
-const codCPF = document.getElementById('codCPF')
-const telefone = document.getElementById('telefone')
-const senha = document.getElementById('senha')
-const confirmSenha = document.getElementById('confirm_senha')
+function ValidateField(field) {
+    // logica para verificar se existem erros
+    function verifyErrors() {
+        let foundError = false;
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    checkInputs()
-})
-
-function checkInputs() {
-
-    const nomeValue = nome.value.trim()
-    const emailValue = email.value.trim()
-    const codCPFValue = codCPF.value.trim()
-    const telefoneValue = telefone.value.trim()
-    const senhaValue = senha.value.trim()
-    const confirmSenhaValue = confirmSenha.value.trim()
-
-    if(nomeValue == "") {
-
-        nome.focus()
-
-        console.log("erro nome")
-   
-    } 
-
-    if(emailValue == "") {
-
-        email.focus()
-
-        console.log("erro email")
-   
+        for(let error in field.validity) {
+            // se não for customError
+            // então verifica se tem erro
+            if (field.validity[error] && !field.validity.valid ) {
+                foundError = error
+            }
+        }
+        return foundError;
     }
 
-    if(codCPFValue == "") {
+    function customMessage(typeError) {
+        const messages = {
+            text: {
+                valueMissing: "Preencha todos os campos corretamente"
+            },
+            email: {
+                valueMissing: "Preencha todos os campos corretamente",
+                typeMismatch: "Preencha todos os campos corretamente"
+            },
+            password:{
+                valueMissing: "Preencha todos os campos corretamente"
+            }
+        }
 
-        codCPF.focus()
-
-        console.log("erro cpf")
-   
+        return messages[field.type][typeError]
     }
 
-    if(telefoneValue == "") {
-
-        telefone.focus()
-
-        console.log("erro telefone")
-   
+    function setCustomMessage(message) {
+        const spanError = document.getElementById('error')
+        
+        if (message) {
+            spanError.classList.remove("error")
+            spanError.classList.add("active")
+            spanError.innerHTML = message
+        } else {
+            spanError.classList.add("error")
+            spanError.classList.remove("active")
+            spanError.innerHTML = ""
+        }
     }
 
-    if(senhaValue == "") {
+    return function() {
 
-        senha.focus()
+        const error = verifyErrors()
 
-        console.log("erro senha")
-   
+        if(error) {
+            const message = customMessage(error)
+
+            field.parentNode.style.border = "1px solid crimson"
+            setCustomMessage(message)
+        } else {
+            field.parentNode.style.border = "1px solid rgb(88, 252, 88)"
+            setCustomMessage()
+        }
     }
-
-    if(confirmSenhaValue == "") {
-
-        confirmSenha.focus()
-
-        console.log("erro confirmsenha")
-   
-    }
+}
 
 
+function customValidation(event) {
 
+    const field = event.target
+    const validation = ValidateField(field)
+
+    validation()
 
 }
 
+for( field of fields ){
+    field.addEventListener("invalid", event => { 
+        // eliminar o bubble
+        event.preventDefault()
+
+        customValidation(event)
+    })
+    field.addEventListener("blur", customValidation)
+}
+
+
+document.querySelector("form")
+.addEventListener("submit", event => {
+    console.log("enviar o formulário")
+
+    // não vai enviar o formulário
+
+})

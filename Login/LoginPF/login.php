@@ -41,7 +41,7 @@
         
             <h2>Login</h2>
 
-            <form action="#" method="post">
+            <form action="login.act.php" method="post">
 
                 <div class="inputBox">
                     <i class="fas fa-user"></i>
@@ -57,10 +57,17 @@
                 <input type="submit" value="Entrar" class="inputSub"/>
 
             </form>
+            <?php
+                  @session_start();
+                  if(isset($_SESSION['msg'])){
+                      echo $_SESSION['msg'];
+                      unset($_SESSION['msg']);
+                  }
+            ?>
             <div class="link">
                 <a href="#">Esqueci a senha?</a>
                 <span>·</span>
-                <a href="#">Cadastre-se</a>
+                <a href="cadastro.html">Cadastre-se</a>
             </div>
 
             <p class="social-text">Ou entre pelas redes sociais</p>

@@ -18,7 +18,7 @@ body {
 
 .container {
     width: 900px;
-    height: 85vh;
+    height: 90vh;
     display: flex;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -137,15 +137,11 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 
 .loginBox h2 {
-    margin-bottom: 20px;
-}
-
-.link {
-    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .link a:hover {
@@ -165,12 +161,13 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+
 }
 
 
 .inputBox{
     max-width: 290px;
+    margin:10px;
     width: 80%;
     background-color: #f0f0f0;
     height: 33px;
@@ -179,6 +176,7 @@ form {
     grid-template-columns: 15% 85%;
     padding: 0;
     position: relative;
+    border: 1px solid #060d29;
 }
 
 .inputBox .fas{
@@ -186,11 +184,12 @@ form {
     line-height: 33px;
     color: #acacac;
     transition: 0.5s;
-    font-size: 1rem;
+    
+    /*font-size: 1rem;
     border: 1px solid #060d29;
     border-right: none;
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;*/
   }
 
 .inputBox input {
@@ -211,13 +210,19 @@ form {
     transition: 0.5s;
 }
 
+.active{
+    display: block;
+    margin-top: 10px;
+    color: crimson;
+    font-size: 0.75em;
+}
+
 .error {
-    border: 1px solid crimson;
+    display: none;
 }
 
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
-    color: crimson;
     transform: translateX(10px) translateY(-7px);
     font-size: 0.65em;
     padding: 0 10px;
@@ -227,6 +232,7 @@ form {
     letter-spacing: 0.2em;
 }
 
+/*
 .inputBox input:valid,
 .inputBox input:focus {
     border: 1px solid #060d29;
@@ -234,7 +240,7 @@ form {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
+*/
 .inputSub {
     width: 270px;
     height: 33px;
