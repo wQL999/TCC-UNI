@@ -17,8 +17,8 @@ body {
 }
 
 .container {
-    width: 900px;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
@@ -40,7 +40,8 @@ body {
     position: relative;
     height: 65px;
     border-top: 1px solid white;
-    width: 240px;
+    width: 100%;
+    font-size: 1.3em;
 }
 
 li {
@@ -106,13 +107,13 @@ li {
 }
 
 .texto .logo{
-    font-size: 40px;
+    font-size: 80px;
     color: #fff;
 
 }
 
 .texto .logo span {
-    font-size: 40px;
+    font-size: 80px;
     position: relative;
     display: inline-block;
     color: #fff;
@@ -134,28 +135,47 @@ li {
 .loginBox {
     background-color: #fff;
     width: 70%;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    text-align: center;
     padding: 50px;
 }
 
+
+
+.login {
+    height: 400px;
+    width: 500px;
+    margin-left: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+  
+}
+.svg {
+    margin-top: 300px;
+    margin-left: 200px;
+}
+
 .loginBox h2 {
-    margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 30px;
 }
 
-.link {
-    margin-top: 30px;
+.link{
+    margin-top: 20px;
 }
-
+.link a {
+    font-size: 1.2em;
+}
 .link a:hover {
 
   border-bottom: 1px solid crimson;
+  transition: 0.    5s;
 
 }
 
 a {
-
     text-decoration: none;
     color: black;
 }
@@ -165,15 +185,16 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+
 }
 
 
 .inputBox{
-    max-width: 290px;
-    width: 80%;
+    max-width: 320px;
+    width: 90%;
     background-color: #f0f0f0;
-    height: 33px;
+    height: 40px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 15% 85%;
@@ -184,14 +205,14 @@ form {
 
 .inputBox .fas{
     text-align: center;
-    line-height: 33px;
+    line-height: 35px;
     color: #acacac;
     transition: 0.5s;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
 .inputBox input {
-    width: 240px;
+    width: 100%;
     background: none;
     outline: none;
     border: none;
@@ -203,14 +224,13 @@ form {
     left: 50px;
     padding: 3px;
     pointer-events: none;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #333;
     transition: 0.5s;
 }
-
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
-    color: crimson;
+    color: #060d29;
     transform: translateX(10px) translateY(-7px);
     font-size: 0.65em;
     padding: 0 10px;
@@ -237,14 +257,14 @@ form {
 */
 
 .inputSub {
-    width: 270px;
+    width: 300px;
     height: 33px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     background-color: #060d29;
     color: white;
     outline: none;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1.3em;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transition: 0.5s;
 }
@@ -259,7 +279,7 @@ form {
 
 .social-text {
     padding: 0.7rem 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
 .social-media {
@@ -268,8 +288,8 @@ form {
   }
   
   .social-icon {
-    height: 33px;
-    width: 33px;
+    height: 45px;
+    width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,11 +298,11 @@ form {
     border-radius: 50%;
     border: 1px solid #333;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     transition: 0.3s;
   }
   
   .social-icon:hover {
-    color:rgb(211, 51, 51);
-    border-color: #060d29;
+    color:#d33333;
+    border-color: #d33333;
   }

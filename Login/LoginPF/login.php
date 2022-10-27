@@ -38,25 +38,48 @@
         </div>
 
         <div class="loginBox">
-        
-            <h2>Login</h2>
+            <div class="login">
+                <h2>Login</h2>
+                <form action="login.act.php" method="post">
+                    <div class="inputBox">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="email" id="" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="senha" id="" required> 
+                        <span>Senha</span>
+                    </div>
 
-            <form action="login.act.php" method="post">
+                    <input type="submit" value="Entrar" class="inputSub"/>
+                </form> 
 
-                <div class="inputBox">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="email" id="" required>
-                    <span>Email</span>
+                <div class="link">
+                    <a href="#">Esqueci a senha?</a>
+                    <span>·</span>
+                    <a href="cadastro.html">Cadastre-se</a>
                 </div>
-                <div class="inputBox">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" name="senha" id="" required> 
-                    <span>Senha</span>
+
+                <p class="social-text">Ou entre pelas redes sociais</p>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
+            </div> 
 
-                <input type="submit" value="Entrar" class="inputSub"/>
-
-            </form>
+           
             <?php
                   @session_start();
                   if(isset($_SESSION['msg'])){
@@ -64,30 +87,11 @@
                       unset($_SESSION['msg']);
                   }
             ?>
-            <div class="link">
-                <a href="#">Esqueci a senha?</a>
-                <span>·</span>
-                <a href="cadastro.html">Cadastre-se</a>
+            <div class="svg">
+                <img class="svg-gif"src="Team spirit (1).gif" alt="">
             </div>
-
-            <p class="social-text">Ou entre pelas redes sociais</p>
-
-            <div class="social-media">
-                <a href="#" class="social-icon">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="#" class="social-icon">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            
         </div>
+        
     </div>
 
 </body>
