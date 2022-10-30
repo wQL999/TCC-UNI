@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni - Cadastro</title>
+    <link rel="stylesheet" href="cad-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="validacao.js" defer></script>
+</head>
+<body>
+
+    <div class="container">    
+        <div class="text-image">
+            <a href="#" class="logo">
+                Uni<span style="--i:1; color: crimson">!</span>
+            </a>
+
+            <div class="slideVertical">
+                <p>Uni's Personality</p>
+                    
+                <ul class="flip5">
+                    <li>União</li>
+                    <li>Família</li>
+                    <li>Confiança</li>
+                    <li>Amizade</li>
+                    <li>Solidariedade</li>
+                </ul>
+            </div>
+            <img class="svg-image" src="Sign up-amico (1).svg" alt="">
+           
+        </div>
+
+        <div class="login">
+            <div class="card-login">
+                <h2>Cadastro</h2>
+
+            <form action="cadastro.act.php" method="post" id="form" name="form" autocomplete="off">
+
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nome" id="nome" placeholder="Nome"  >
+                    <span>Nome</span>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="email" id="email" placeholder="Email" >
+                    <span>Email</span>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="codCPF" id="codCPF" placeholder="___.___.___-__" maxlength="14" >
+                    <span>CPF</span>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999 - 9999" maxlength="15" >
+                    <span>Telefone</span>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="senha" id="senha" placeholder="Senha"> 
+                    <span>Senha</span>
+                    <small class="error"></small>
+                </div>
+                <div class="inputBox" id="inputBox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirm_senha" id="confirm_senha" placeholder="Confirme a senha"> 
+                    <span>Confirme a senha</span>
+                    <small class="error"></small>
+                </div>
+
+                <input type="submit" value="Cadastrar" class="inputSub"/>
+
+                </form>
+
+                <div class="link">
+                    <a href="#">Já possuo uma conta</a>
+                </div>
+
+                <p class="social-text">Ou entre pelas redes sociais</p>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>

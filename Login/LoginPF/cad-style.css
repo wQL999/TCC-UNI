@@ -1,49 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    height: 100vh;
-    background: rgba(165, 165, 165, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
 .container {
-    width: 900px;
-    height: 90vh;
-    display: flex;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.texto {
-    width: 30%;
-    background: #060d29;
-    color: white;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
-    
+    background-image: url("blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
-.slideVertical {
+.text-image {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-image .logo{
+    font-size: 3.5rem;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.logo span {
+    font-size: 3.5rem;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    animation: onda 1.55s infinite;
+    animation-delay: calc(.1s * var(--i));
+
+
+}
+
+.logo:hover {
+    transition: 0.5s;
+    text-shadow: 0px 0px 5px #dc143c, 0px 0px 10px #dc143c, 0px 0px 10px #dc143c,
+    0px 0px 20px #dc143c;
+}
+
+@keyframes onda {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+
+
+.text-image .slideVertical {
     overflow: hidden;
     position: relative;
     height: 65px;
-    border-top: 1px solid white;
-    width: 240px;
+    width: 100%;
+    font-size: 1.09em;
+    text-align: center;
+
 }
 
-li {
+.text-image .slideVertical p{
+   color: white;
+   font-size: 1.3rem;
+}
+
+.text-image .slideVertical li {
     color: #eee;
     font-weight: 700;
     padding: 0 5px;
@@ -105,99 +144,77 @@ li {
 100% { margin-top: -450px; }
 }
 
-.texto .logo{
-    font-size: 40px;
-    color: #fff;
+.svg-image{
+    width: 35vw;
 
 }
 
-.texto .logo span {
-    font-size: 40px;
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    animation: onda 1.55s infinite;
-    animation-delay: calc(.1s * var(--i));
-
-}
-
-@keyframes onda {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-20px)
-    }
-  }
-
-
-.loginBox {
-    background-color: #fff;
-    width: 70%;
+.login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px;
 }
 
-.loginBox h2 {
-    margin-bottom: 15px;
-}
-
-.link a:hover {
-
-  border-bottom: 1px solid crimson;
-
-}
-
-a {
-
-    text-decoration: none;
-    color: black;
-}
-
-form {
+.card-login {
+    width: 80%;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    padding: 30px 35px;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #dc143c;
 }
 
+.card-login h2 {
+    background-image: linear-gradient(to bottom, #dc143c, #060d29);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 23px;
+}
 
 .inputBox{
-    max-width: 290px;
-    margin:10px;
-    width: 80%;
+    width: 333px;
     background-color: #f0f0f0;
-    height: 33px;
+    height: 40px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 15% 85%;
-    padding: 0;
+    padding: 0 0.5rem;
     position: relative;
-    border: 1px solid #060d29;
+    border: 1px solid #333;
 }
 
 .inputBox .fas{
     text-align: center;
-    line-height: 33px;
+    line-height: 35px;
     color: #acacac;
     transition: 0.5s;
-    
-    /*font-size: 1rem;
-    border: 1px solid #060d29;
-    border-right: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;*/
+    font-size: 1.3rem;
   }
 
 .inputBox input {
-    width: 245px;
+    width: 100%;
     background: none;
     outline: none;
     border: none;
     color: #333;
+    font-size: 1rem;
 }
 
 .inputBox span {
@@ -205,51 +222,44 @@ form {
     left: 50px;
     padding: 3px;
     pointer-events: none;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #333;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.active{
-    display: block;
-    margin-top: 10px;
+.inputBox .error {
     color: crimson;
-    font-size: 0.75em;
+    padding: 5px;
+    font-size: 0.7rem;
+    width: 300px;
 }
 
-.error {
-    display: none;
+.inputBox.error {
+    border-color: crimson;
 }
 
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
-    transform: translateX(10px) translateY(-7px);
-    font-size: 0.65em;
-    padding: 0 10px;
-    background: white;
-    border-left: 1px solid #060d29;
-    border-right: 1px solid #060d29;
+.inputBox.success {
+    border-color: rgb(33, 255, 25);
+}
+
+.inputBox span {
+    color: #060d29;
+    background: #fafafa;
+    transform: translateX(10px) translateY(-10px);
+    font-size: 0.7em;
+    padding: 0 9px;
     letter-spacing: 0.2em;
 }
 
-/*
-.inputBox input:valid,
-.inputBox input:focus {
-    border: 1px solid #060d29;
-    border-left: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-*/
 .inputSub {
-    width: 270px;
+    width: 333px;
     height: 33px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     background-color: #060d29;
     color: white;
     outline: none;
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 1.3em;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transition: 0.5s;
 }
@@ -257,24 +267,30 @@ form {
 .inputSub:hover{
     transition: 0.5s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-    letter-spacing: 1px;
-    
+    cursor: pointer;   
+}
+
+.link{
+    margin-top: 20px;
+}
+
+.link a{
+    color: black
 }
 
 .social-text {
     padding: 0.7rem 0;
-    font-size: 1rem;
-  }
+    font-size: 1.3rem;
+}
 
 .social-media {
     display: flex;
     justify-content: center;
-  }
+}
   
-  .social-icon {
-    height: 33px;
-    width: 33px;
+.social-icon {
+    height: 45px;
+    width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,11 +299,13 @@ form {
     border-radius: 50%;
     border: 1px solid #333;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     transition: 0.3s;
-  }
+}
   
-  .social-icon:hover {
-    color:rgb(211, 51, 51);
-    border-color: #060d29;
-  }
+.social-icon:hover {
+    color:#dc143c;
+    border-color: #dc143c;
+}
+
+

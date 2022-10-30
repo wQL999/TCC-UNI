@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNI - Login</title>
+    <title>Uni - Login</title>
     <link rel="stylesheet" href="log-style.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script
@@ -13,20 +13,16 @@
   ></script>
 </head>
 <body>
-    <div class="container">
 
-        <div class="texto">
+    <div class="container">    
+        <div class="text-image">
             <a href="#" class="logo">
-                <!--<span style="--i:1">U</span>
-                <span style="--i:2">n</span>
-                <span style="--i:3">i</span>
-                <span style="--i:4; color: crimson;">!</span> -->
                 Uni<span style="--i:1; color: crimson">!</span>
             </a>
 
             <div class="slideVertical">
-                Uni's Personality
-                
+                <p>Uni's Personality</p>
+                    
                 <ul class="flip5">
                     <li>União</li>
                     <li>Família</li>
@@ -35,10 +31,12 @@
                     <li>Solidariedade</li>
                 </ul>
             </div>
+            <img class="svg-image" src="Tablet login-amico (3).svg" alt="">
+           
         </div>
 
-        <div class="loginBox">
-            <div class="login">
+        <div class="login">
+            <div class="card-login">
                 <h2>Login</h2>
                 <form action="login.act.php" method="post">
                     <div class="inputBox">
@@ -53,12 +51,12 @@
                     </div>
 
                     <input type="submit" value="Entrar" class="inputSub"/>
-                </form> 
+                </form>
 
                 <div class="link">
-                    <a href="#">Esqueci a senha?</a>
+                    <a href="#">Esqueci a senha</a>
                     <span>·</span>
-                    <a href="cadastro.html">Cadastre-se</a>
+                    <a href="cadastro.html">Cadastrar-se</a>
                 </div>
 
                 <p class="social-text">Ou entre pelas redes sociais</p>
@@ -77,22 +75,12 @@
                     <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-            </div> 
-
-           
-            <?php
-                  @session_start();
-                  if(isset($_SESSION['msg'])){
-                      echo $_SESSION['msg'];
-                      unset($_SESSION['msg']);
-                  }
-            ?>
-            <div class="svg">
-                <img class="svg-gif"src="Team spirit (1).gif" alt="">
             </div>
         </div>
-        
-    </div>
 
+
+
+    </div>
+    
 </body>
 </html>

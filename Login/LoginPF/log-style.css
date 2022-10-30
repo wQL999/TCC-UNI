@@ -1,50 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    height: 100vh;
-    background: rgba(165, 165, 165, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-}
-
 .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.texto {
-    width: 30%;
-    background: #060d29;
-    color: white;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
-    
+    background-image: url("blob-scene-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
-.slideVertical {
+.text-image {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-image .logo{
+    font-size: 3.5rem;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.logo span {
+    font-size: 3.5rem;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    animation: onda 1.55s infinite;
+    animation-delay: calc(.1s * var(--i));
+
+
+}
+
+.logo:hover {
+    transition: 0.5s;
+    text-shadow: 0px 0px 5px #dc143c, 0px 0px 10px #dc143c, 0px 0px 10px #dc143c,
+    0px 0px 20px #dc143c;
+}
+
+@keyframes onda {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+
+
+.text-image .slideVertical {
     overflow: hidden;
     position: relative;
     height: 65px;
-    border-top: 1px solid white;
     width: 100%;
-    font-size: 1.3em;
+    font-size: 1.09em;
+    text-align: center;
+
 }
 
-li {
+.text-image .slideVertical p{
+   color: white;
+   font-size: 1.3rem;
+}
+
+.text-image .slideVertical li {
     color: #eee;
     font-weight: 700;
     padding: 0 5px;
@@ -106,93 +144,52 @@ li {
 100% { margin-top: -450px; }
 }
 
-.texto .logo{
-    font-size: 80px;
-    color: #fff;
+.svg-image{
+    width: 35vw;
 
 }
-
-.texto .logo span {
-    font-size: 80px;
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    animation: onda 1.55s infinite;
-    animation-delay: calc(.1s * var(--i));
-
-}
-
-@keyframes onda {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-20px)
-    }
-  }
-
-
-.loginBox {
-    background-color: #fff;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-}
-
-
 
 .login {
-    height: 400px;
-    width: 500px;
-    margin-left: 200px;
-    text-align: center;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-  
-}
-.svg {
-    margin-top: 300px;
-    margin-left: 200px;
 }
 
-.loginBox h2 {
-    font-size: 35px;
-    margin-bottom: 30px;
-}
-
-.link{
-    margin-top: 20px;
-}
-.link a {
-    font-size: 1.2em;
-}
-.link a:hover {
-
-  border-bottom: 1px solid crimson;
-  transition: 0.    5s;
-
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-form {
+.card-login {
+    width: 60%;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
-
+    padding: 30px 35px;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #dc143c;
 }
 
+.card-login h2 {
+    background-image: linear-gradient(to bottom, #dc143c, #060d29);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
 
 .inputBox{
-    max-width: 320px;
-    width: 90%;
+    width: 333px;
     background-color: #f0f0f0;
     height: 40px;
     border-radius: 10px;
@@ -200,7 +197,7 @@ form {
     grid-template-columns: 15% 85%;
     padding: 0 0.5rem;
     position: relative;
-    border: 1px solid #060d29;
+    border: 1px solid #333;
 }
 
 .inputBox .fas{
@@ -217,6 +214,7 @@ form {
     outline: none;
     border: none;
     color: #333;
+    font-size: 1rem;
 }
 
 .inputBox span {
@@ -226,38 +224,21 @@ form {
     pointer-events: none;
     font-size: 1.2em;
     color: #333;
-    transition: 0.5s;
+    transition: 0.3s;
 }
+
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
     color: #060d29;
+    background: #fafafa;
     transform: translateX(10px) translateY(-7px);
-    font-size: 0.65em;
+    font-size: 0.8em;
     padding: 0 10px;
-    background: white;
-    border-left: 1px solid #060d29;
-    border-right: 1px solid #060d29;
     letter-spacing: 0.2em;
 }
 
-.error{
-    display: block;
-    margin-top: 10px;
-    color: crimson;
-    font-size: 0.75em;
-}
-
-/*
-.inputBox input:valid,
-.inputBox input:focus {
-    border: 1px solid #060d29;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-*/
-
 .inputSub {
-    width: 300px;
+    width: 333px;
     height: 33px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     background-color: #060d29;
@@ -272,22 +253,28 @@ form {
 .inputSub:hover{
     transition: 0.5s;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
-    letter-spacing: 1px;
-    
+    cursor: pointer;   
+}
+
+.link{
+    margin-top: 20px;
+}
+
+.link a{
+    color: black
 }
 
 .social-text {
     padding: 0.7rem 0;
     font-size: 1.3rem;
-  }
+}
 
 .social-media {
     display: flex;
     justify-content: center;
-  }
+}
   
-  .social-icon {
+.social-icon {
     height: 45px;
     width: 45px;
     display: flex;
@@ -300,9 +287,11 @@ form {
     text-decoration: none;
     font-size: 1.3rem;
     transition: 0.3s;
-  }
+}
   
-  .social-icon:hover {
-    color:#d33333;
-    border-color: #d33333;
-  }
+.social-icon:hover {
+    color:#dc143c;
+    border-color: #dc143c;
+}
+
+
